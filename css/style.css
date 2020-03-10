@@ -1,0 +1,254 @@
+body {
+  background: url(../img/bg.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+.content {
+  width: 686px;
+  height: 390px;
+  background: #111a28;
+  box-shadow: 0px 0px 65px rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 300px;
+}
+.content__logo {
+  padding: 20px 0 0 20px;
+}
+.content__images {
+  margin-top: 58px;
+  padding-left: 20px;
+}
+/* slides */
+#block-for-slider {
+  width: 400px;
+  margin-top: 58px;
+  margin-left: -15px;
+}
+
+#viewport {
+  width: 100%;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+
+#slidewrapper {
+  width: calc(100% * 4);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.67, 0.01, 0.23, 1);
+  -o-transition-timing-function: cubic-bezier(0.67, 0.01, 0.23, 1);
+  transition-timing-function: cubic-bezier(0.67, 0.01, 0.23, 1);
+}
+
+#slidewrapper,
+#slidewrapper ul,
+#slidewrapper li {
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  width: calc(100% / 4);
+  list-style: none;
+  display: inline;
+  float: left;
+}
+
+.slide-img {
+  width: 330px;
+  height: 160px;
+}
+#nav-btns {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+[class^="slide-nav-btn"] {
+  display: inline-block;
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 3px;
+  margin-top: 81px;
+}
+.slide-nav-btn-1 {
+  background: #1f273f;
+}
+.slide-nav-btn-2 {
+  background: #ffffff;
+}
+
+.slide-nav-btn-3 {
+  background: #ed3333;
+}
+
+.slide-nav-btn-4 {
+  background: #29e3ea;
+}
+
+[class^="slide-nav-btn"]:hover {
+  cursor: pointer;
+}
+.aside {
+  min-width: 200px;
+  margin: 66px 55px 65px 46px;
+}
+.aside__title {
+  margin: 0;
+  font-family: "Mukta";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0.05em;
+  color: #e1e1e1;
+}
+.aside__subtitle {
+  margin: 0;
+  font-family: "Mukta";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #e1e1e1;
+  opacity: 0.54;
+}
+.input__rating[type="radio"] {
+  display: none;
+}
+.label__rating {
+  cursor: pointer;
+  color: white;
+  margin-top: 23px;
+  margin-right: 3px;
+  font-size: 9px;
+  float: right;
+  display: block;
+}
+.label__rating::before {
+  font-family: "FontAwesome";
+  content: "\f005";
+}
+/*Пишем правила смены положения background-а*/
+.input__rating + .label__rating:hover, /*Правило для ховера на текущий лейбл*/
+  .input__rating + .label__rating:hover ~ .label__rating, /*Правило для всех следующих лейблов по DOM дереву*/
+  .input__rating[type="radio"]:checked ~ .label__rating /*Правило для всех следующих лейблов после выбранного инпута, чтобы звездочки как бы зафиксировались*/
+ {
+  color: #f7bf16;
+}
+.aside__lists {
+  margin-top: 25px;
+}
+.aside__lists .topmenu {
+  margin: 0;
+  margin-right: 5px;
+  padding: 0;
+}
+.aside__lists a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+}
+.topmenu {
+  width: 70px;
+  height: 32px;
+  background: #111a28;
+  opacity: 0.5;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+.topmenu > .topmenu__list {
+  display: inline-block;
+  position: relative;
+}
+.topmenu > .topmenu__list > .down {
+  font-family: "Mukta";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #e1e1e1;
+  padding: 4px 0 6px 12px;
+}
+.down:after {
+  content: "\f107";
+  margin-left: 12px;
+  font-family: "FontAwesome";
+}
+.topmenu > .topmenu__list > .down:hover {
+  color: #e6855f;
+}
+.submenu {
+  background: #111a28;
+  opacity: 0.25;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  z-index: 5;
+  width: 70px;
+  transform: perspective(600px) rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transition: 0.6s ease-in-out;
+  list-style: none;
+  padding: 0;
+  margin-left: -16px;
+}
+.topmenu > .topmenu__list:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg);
+}
+.submenu .submenu__list .submenu__link {
+  font-family: "Mukta";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 20px;
+  color: #e1e1e1;
+  padding: 5px 25px;
+}
+.submenu .submenu__list .submenu__link:hover {
+  color: #e6855f;
+}
+.btn {
+  display: block;
+  font-family: "Mukta";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 20px;
+  color: #e1e1e1;
+  text-decoration: none;
+  margin-top: 70px;
+  width: 200px;
+  height: 40px;
+  background: #111a28;
+  opacity: 0.5;
+  letter-spacing: 0.05em;
+  border: 1px solid #ffffff;
+  padding: 10px 63px;
+}
+.btn:hover {
+  background: #4c525a;
+  opacity: 0.5;
+  border: 1px solid transparent;
+}
+.btn:active {
+    opacity: 0;
+  }
