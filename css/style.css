@@ -59,7 +59,6 @@ body {
 .slide {
   width: calc(100% / 4);
   list-style: none;
-  display: inline;
   float: left;
 }
 
