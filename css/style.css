@@ -148,82 +148,31 @@ body {
  {
   color: #f7bf16;
 }
-.aside__lists {
+.list {
   margin-top: 25px;
-}
-.aside__lists .topmenu {
-  margin: 0;
   margin-right: 5px;
-  padding: 0;
-}
-.aside__lists a {
-  display: block;
-  text-decoration: none;
-  outline: none;
-  transition: 0.4s ease-in-out;
-}
-.topmenu {
   width: 70px;
   height: 32px;
-  background: #111a28;
-  opacity: 0.5;
+  background: #111a28 url(../img/strelka.png) no-repeat 84% 54%;
+  opacity: 0.25;
   border: 1px solid #ffffff;
   box-sizing: border-box;
+  color: #e1e1e1;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 0 6px 11px;
+  -webkit-appearance: none;
 }
-.topmenu > .topmenu__list {
-  display: inline-block;
-  position: relative;
-}
-.topmenu > .topmenu__list > .down {
+.list__content {
+  outline: none;
   font-family: "Mukta";
   font-style: normal;
   font-weight: 200;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.05em;
+  cursor: pointer;
   color: #e1e1e1;
-  padding: 4px 0 6px 12px;
-}
-.down:after {
-  content: "\f107";
-  margin-left: 12px;
-  font-family: "FontAwesome";
-}
-.topmenu > .topmenu__list > .down:hover {
-  color: #e6855f;
-}
-.submenu {
-  background: #111a28;
-  opacity: 0.25;
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  visibility: hidden;
-  z-index: 5;
-  width: 70px;
-  transform: perspective(600px) rotateX(-90deg);
-  transform-origin: 0% 0%;
-  transition: 0.6s ease-in-out;
-  list-style: none;
-  padding: 0;
-  margin-left: -16px;
-}
-.topmenu > .topmenu__list:hover .submenu {
-  visibility: visible;
-  opacity: 1;
-  transform: perspective(600px) rotateX(0deg);
-}
-.submenu .submenu__list .submenu__link {
-  font-family: "Mukta";
-  font-style: normal;
-  font-weight: 200;
-  font-size: 14px;
-  line-height: 20px;
-  color: #e1e1e1;
-  padding: 5px 25px;
-}
-.submenu .submenu__list .submenu__link:hover {
-  color: #e6855f;
 }
 .btn {
   display: block;
@@ -234,20 +183,22 @@ body {
   line-height: 20px;
   color: #e1e1e1;
   text-decoration: none;
-  margin-top: 70px;
+  margin-top: 20px;
   width: 200px;
   height: 40px;
   background: #111a28;
-  opacity: 0.5;
+  opacity: 0.25;
   letter-spacing: 0.05em;
   border: 1px solid #ffffff;
   padding: 10px 63px;
+  cursor: pointer;
+  outline: none;
 }
 .btn:hover {
   background: #4c525a;
   opacity: 0.5;
-  border: 1px solid transparent;
+  border: 1px solid #FFFFFF;
 }
 .btn:active {
-    opacity: 0;
-  }
+  opacity: 0;
+}
